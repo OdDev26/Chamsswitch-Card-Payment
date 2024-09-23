@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form id="ddc-form" target="ddc-iframe" method="POST" th:action="${url}" >
+  <input type = "hidden" name = "JWT" th:value ="${jwt}" />
+  <button type="submit" class="btn btn-info col-2">Proceed</button>
+</form>
+</body>
+</html>

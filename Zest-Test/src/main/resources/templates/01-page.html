@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form th:action="@{/process/card}" th:object="${paymentRequest}" method="POST">
+    <input type="text" placeholder="enter otp" th:field="*{otp}" class="form-control mb-4 w-25">
+    <button type="submit" class="btn btn-info col-2">Proceed</button>
+</form>
+</body>
+</html>
