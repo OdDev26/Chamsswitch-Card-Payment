@@ -25,17 +25,17 @@ public class ViewController {
    @Value(value = "${vfd.token}")
    String vfdToken;
 
-
+   @GetMapping("/")
+   public String index(Model model) throws JsonProcessingException {
+      return "index";
+   }
    @GetMapping("/zest-payment")
    public String nonTokenizedPayment(Model model) throws JsonProcessingException {
       PaymentRequest paymentRequest = new PaymentRequest();
       model.addAttribute("paymentRequest",paymentRequest);
       return "non-tokenized-payment-form";
    }
-   @GetMapping("/")
-   public String index(Model model) throws JsonProcessingException {
-      return "index";
-   }
+
 
    @GetMapping("/tokenized")
    public String tokenizedPayment(Model model) throws JsonProcessingException {
